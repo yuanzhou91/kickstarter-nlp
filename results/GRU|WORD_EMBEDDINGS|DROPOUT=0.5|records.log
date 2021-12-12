@@ -1,0 +1,79 @@
+Text Classification with Neural Networks
+
+TensorFlow/Keras environment for this work:
+Numpy version:  1.19.2
+TensorFlow version:  2.3.1
+TensorFlow was built with CUDA:  False
+TensorFlow running with GPU:  False
+Keras version:  2.4.0
+   Unnamed: 0                                              blurb       state
+0           1  Using their own character, users go on educati...      failed
+1           2  MicroFly is a quadcopter packed with WiFi, 6 s...  successful
+2           3  A small indie press, run as a collective for a...      failed
+3           4  Zylor is a new baby cosplayer! Back this kicks...      failed
+4           5  Hatoful Boyfriend meet Skeletons! A comedy Dat...      failed
+Index(['Unnamed: 0', 'blurb', 'state'], dtype='object')
+Training vocabulary size with one out-of-vocabulary item:  82785
+
+Integer codes for category labels:
+{'failed': 0, 'successful': 1}
+
+Label integers to category words:
+{0: 'failed', 1: 'successful'}
+
+Epoch-by-Epoch Training Process
+Epoch 1/100
+4063/4063 - 27s - loss: 0.6815 - accuracy: 0.5446 - val_loss: 0.6341 - val_accuracy: 0.6583
+Epoch 2/100
+4063/4063 - 26s - loss: 0.6343 - accuracy: 0.6482 - val_loss: 0.6147 - val_accuracy: 0.6715
+Epoch 3/100
+4063/4063 - 26s - loss: 0.6206 - accuracy: 0.6662 - val_loss: 0.6119 - val_accuracy: 0.6707
+Epoch 4/100
+4063/4063 - 26s - loss: 0.6150 - accuracy: 0.6733 - val_loss: 0.6147 - val_accuracy: 0.6688
+
+Time of execution for training (seconds):    105.307
+
+Full training set accuracy: 0.6974 
+
+Hold-out test set accuracy: 0.6649
+{'loss': [0.6815353631973267, 0.6342583894729614, 0.6205617189407349, 0.6150162816047668], 'accuracy': [0.5445692539215088, 0.6482231020927429, 0.6661615371704102, 0.6733230948448181], 'val_loss': [0.6340848207473755, 0.6146949529647827, 0.6118873953819275, 0.614668607711792], 'val_accuracy': [0.6583117246627808, 0.6715161800384521, 0.6707144379615784, 0.6688281297683716]}
+
+Classification Report for Hold-out Test Set:
+
+              precision    recall  f1-score   support
+
+      failed       0.71      0.56      0.63     21532
+  successful       0.64      0.77      0.70     21571
+
+    accuracy                           0.66     43103
+   macro avg       0.67      0.66      0.66     43103
+weighted avg       0.67      0.66      0.66     43103
+
+Test set F1 (weighted average): 0.6612 
+
+Confusion matrix
+(rows = true index value for category 
+ columns = predicted index value for category)
+[[12072  9460]
+ [ 4983 16588]]
+
+Label integers to category words:
+{0: 'failed', 1: 'successful'} 
+
+Word embeddings matrix dimensions (vocab_size, embeddings_dim):  (5000, 8) 
+
+NEURAL NETWORK MODELING COMPLETE
+
+TensorFlow/Keras environment for this work:
+Numpy version:  1.19.2
+TensorFlow version:  2.3.1
+TensorFlow was built with CUDA:  False
+TensorFlow running with GPU:  False
+Keras version:  2.4.0
+
+Word embeddings (TSV file of vectors):   GRU|WORD_EMBEDDINGS|DROPOUT=0.5|file_embeddings_out.tsv
+Vocabulary words (TSV file of metadata):  GRU|WORD_EMBEDDINGS|DROPOUT=0.5|file_words_out.tsv
+Load into http://projector.tensorflow.org/ to view embeddings
+
+RUN COMPLETE
+

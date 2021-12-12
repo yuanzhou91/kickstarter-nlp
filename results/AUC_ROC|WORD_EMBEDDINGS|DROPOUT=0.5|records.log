@@ -1,0 +1,166 @@
+Text Classification with Neural Networks
+
+TensorFlow/Keras environment for this work:
+Numpy version:  1.19.2
+TensorFlow version:  2.3.1
+TensorFlow was built with CUDA:  False
+TensorFlow running with GPU:  False
+Keras version:  2.4.0
+   Unnamed: 0                                              blurb       state
+0           1  Using their own character, users go on educati...      failed
+1           2  MicroFly is a quadcopter packed with WiFi, 6 s...  successful
+2           3  A small indie press, run as a collective for a...      failed
+3           4  Zylor is a new baby cosplayer! Back this kicks...      failed
+4           5  Hatoful Boyfriend meet Skeletons! A comedy Dat...      failed
+Index(['Unnamed: 0', 'blurb', 'state'], dtype='object')
+Training vocabulary size with one out-of-vocabulary item:  82785
+
+Integer codes for category labels:
+{'successful': 0, 'failed': 1}
+[1 1 0 1 0 0 0 0 1 0]
+
+Label integers to category words:
+{0: 'successful', 1: 'failed'}
+
+ Training Model:  1D-CNN
+
+Epoch-by-Epoch Training Process
+Epoch 1/100
+4063/4063 - 4s - loss: 0.6590 - accuracy: 0.5992 - val_loss: 0.6352 - val_accuracy: 0.6477
+Epoch 2/100
+4063/4063 - 4s - loss: 0.6237 - accuracy: 0.6568 - val_loss: 0.6269 - val_accuracy: 0.6563
+Epoch 3/100
+4063/4063 - 4s - loss: 0.6145 - accuracy: 0.6693 - val_loss: 0.6259 - val_accuracy: 0.6560
+
+Time of execution for training (seconds):     13.612
+
+Full training set accuracy: 0.6965 
+
+Hold-out test set accuracy: 0.6545
+
+Classification Report for Hold-out Test Set:
+
+              precision    recall  f1-score   support
+
+  successful       0.69      0.55      0.62     21571
+      failed       0.63      0.75      0.69     21532
+
+    accuracy                           0.65     43103
+   macro avg       0.66      0.65      0.65     43103
+weighted avg       0.66      0.65      0.65     43103
+
+Test set F1 (weighted average): 0.6510 
+
+
+ Training Model ends:  1D-CNN
+
+ Training Model:  DNN
+
+Epoch-by-Epoch Training Process
+Epoch 1/100
+4063/4063 - 3s - loss: 0.6510 - accuracy: 0.6221 - val_loss: 0.6114 - val_accuracy: 0.6678
+Epoch 2/100
+4063/4063 - 3s - loss: 0.6162 - accuracy: 0.6697 - val_loss: 0.6058 - val_accuracy: 0.6713
+Epoch 3/100
+4063/4063 - 3s - loss: 0.5978 - accuracy: 0.6907 - val_loss: 0.6090 - val_accuracy: 0.6631
+
+Time of execution for training (seconds):      9.530
+
+Full training set accuracy: 0.7399 
+
+Hold-out test set accuracy: 0.6656
+
+Classification Report for Hold-out Test Set:
+
+              precision    recall  f1-score   support
+
+  successful       0.69      0.55      0.62     21571
+      failed       0.63      0.75      0.69     21532
+
+    accuracy                           0.65     43103
+   macro avg       0.66      0.65      0.65     43103
+weighted avg       0.66      0.65      0.65     43103
+
+Test set F1 (weighted average): 0.6510 
+
+
+ Training Model ends:  DNN
+
+ Training Model:  LSTM
+
+Epoch-by-Epoch Training Process
+Epoch 1/100
+4063/4063 - 23s - loss: 0.6636 - accuracy: 0.5916 - val_loss: 0.6392 - val_accuracy: 0.6635
+Epoch 2/100
+4063/4063 - 23s - loss: 0.6255 - accuracy: 0.6575 - val_loss: 0.6142 - val_accuracy: 0.6710
+Epoch 3/100
+4063/4063 - 22s - loss: 0.6167 - accuracy: 0.6711 - val_loss: 0.6145 - val_accuracy: 0.6721
+
+Time of execution for training (seconds):     68.577
+
+Full training set accuracy: 0.7057 
+
+Hold-out test set accuracy: 0.6714
+
+Classification Report for Hold-out Test Set:
+
+              precision    recall  f1-score   support
+
+  successful       0.69      0.55      0.62     21571
+      failed       0.63      0.75      0.69     21532
+
+    accuracy                           0.65     43103
+   macro avg       0.66      0.65      0.65     43103
+weighted avg       0.66      0.65      0.65     43103
+
+Test set F1 (weighted average): 0.6510 
+
+
+ Training Model ends:  LSTM
+
+ Training Model:  GRU
+
+Epoch-by-Epoch Training Process
+Epoch 1/100
+4063/4063 - 29s - loss: 0.6763 - accuracy: 0.5570 - val_loss: 0.6239 - val_accuracy: 0.6617
+Epoch 2/100
+4063/4063 - 28s - loss: 0.6298 - accuracy: 0.6507 - val_loss: 0.6090 - val_accuracy: 0.6698
+Epoch 3/100
+4063/4063 - 26s - loss: 0.6201 - accuracy: 0.6633 - val_loss: 0.6056 - val_accuracy: 0.6720
+Epoch 4/100
+4063/4063 - 27s - loss: 0.6149 - accuracy: 0.6685 - val_loss: 0.6053 - val_accuracy: 0.6714
+Epoch 5/100
+4063/4063 - 26s - loss: 0.6137 - accuracy: 0.6701 - val_loss: 0.6048 - val_accuracy: 0.6733
+
+Time of execution for training (seconds):    137.075
+
+Full training set accuracy: 0.7100 
+
+Hold-out test set accuracy: 0.6702
+
+Classification Report for Hold-out Test Set:
+
+              precision    recall  f1-score   support
+
+  successful       0.69      0.55      0.62     21571
+      failed       0.63      0.75      0.69     21532
+
+    accuracy                           0.65     43103
+   macro avg       0.66      0.65      0.65     43103
+weighted avg       0.66      0.65      0.65     43103
+
+Test set F1 (weighted average): 0.6510 
+
+
+ Training Model ends:  GRU
+NEURAL NETWORK MODELING COMPLETE
+
+TensorFlow/Keras environment for this work:
+Numpy version:  1.19.2
+TensorFlow version:  2.3.1
+TensorFlow was built with CUDA:  False
+TensorFlow running with GPU:  False
+Keras version:  2.4.0
+
+RUN COMPLETE
+
